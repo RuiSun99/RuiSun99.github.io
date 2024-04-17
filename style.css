@@ -53,3 +53,15 @@ footer {
     background-color: #333;
     color: #fff;
 }
+
+#toggle-button {
+    display: block;
+    padding: 10px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    /* 按钮在导航栏顶部 */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
