@@ -3,50 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>我的个人网页</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- 导航栏 -->
-    <nav id="sidebar">
-        <div class="toggle-btn" onclick="toggleSidebar()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- 主内容区 -->
-    <div class="content">
-        <h1>Welcome to AI Website</h1>
-        <p>This is a website with AI elements.</p>
+    <div class="container">
+        <nav id="sidebar">
+            <button id="toggle-button">菜单</button>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">关于我</a></li>
+                <li><a href="#">作品集</a></li>
+                <li><a href="#">联系我</a></li>
+            </ul>
+        </nav>
+        <main id="content">
+            <h1>欢迎来到我的个人网页</h1>
+            <p>这是一个带有动态背景，可切换导航栏，并统计访问人数的网页示例。</p>
+        </main>
     </div>
-
-    <!-- 底部访问统计 -->
     <footer>
-        <p>Visitors: <span id="visitor-count">0</span></p>
+        <p>访问人数：<span id="visitor-count">0</span></p>
     </footer>
-
-    <!-- JavaScript 用于侧边栏的展开与隐藏 -->
-    <script>
-        function toggleSidebar() {
-            document.getElementById("sidebar").classList.toggle('active');
-        }
-
-        // 模拟访问人数增加
-        let visitorCount = 0;
-        setInterval(function() {
-            visitorCount++;
-            document.getElementById("visitor-count").innerText = visitorCount;
-        }, 3000); // 每3秒增加一次访问人数
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
