@@ -17,6 +17,11 @@ body {
   width: 250px;
   background-color: #f0f0f0;
   padding: 20px;
+  transition: width 0.3s ease-in-out;
+}
+
+.sidebar.collapsed {
+  width: 50px;
 }
 
 .sidebar ul {
@@ -30,15 +35,4 @@ body {
 }
 
 .sidebar a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-.content {
-  flex: 1;
-  padding: 20px;
-}
-
-h1, h2 {
-  margin-top: 
+  text-decoration: none
