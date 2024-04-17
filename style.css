@@ -1,38 +1,83 @@
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background-image: url("ai-background.jpg"); /* Replace with your AI background image */
-  background-size: cover;
-  background-position: center;
-  color: #333;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-.container {
-  display: flex;
-  min-height: 100vh;
+/* 导航栏样式 */
+#sidebar {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #333;
+    transition: left 0.3s ease;
 }
 
-.sidebar {
-  width: 250px;
-  background-color: #f0f0f0;
-  padding: 20px;
-  transition: width 0.3s ease-in-out;
+#sidebar.active {
+    left: 0;
 }
 
-.sidebar.collapsed {
-  width: 50px;
+#sidebar ul {
+    padding: 0;
+    list-style: none;
 }
 
-.sidebar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+#sidebar ul li {
+    padding: 10px;
 }
 
-.sidebar li {
-  margin-bottom: 20px;
+#sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
 }
 
-.sidebar a {
-  text-decoration: none
+/* 汉堡菜单按钮样式 */
+.toggle-btn {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+.toggle-btn span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin-bottom: 5px;
+}
+
+/* 主内容区样式 */
+.content {
+    margin-left: 250px; /* 与导航栏宽度相同 */
+    padding: 20px;
+}
+
+/* 底部访问统计样式 */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* 移动端样式 */
+@media (max-width: 768px) {
+    #sidebar {
+        left: -100%;
+    }
+
+    #sidebar.active {
+        left: 0;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
