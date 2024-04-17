@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Website</title>
     <link rel="stylesheet" href="styles.css">
+
+    <script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle('active');
+    }
+
+    // 模拟访问人数增加
+    let visitorCount = 0;
+    setInterval(function() {
+        visitorCount++;
+        document.getElementById("visitor-count").innerText = visitorCount;
+    }, 3000); // 每3秒增加一次访问人数
+</script>
+
 </head>
 <body>
 
