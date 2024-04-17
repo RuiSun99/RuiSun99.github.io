@@ -71,6 +71,7 @@ footer {
 @media (max-width: 768px) {
     #sidebar {
         left: -100%;
+        transition: left 0.3s ease;
     }
 
     #sidebar.active {
@@ -80,4 +81,6 @@ footer {
     .content {
         margin-left: 0;
     }
+}
+
 }
